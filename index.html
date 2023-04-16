@@ -5,8 +5,10 @@
     <title>ZebraPunk</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <a href="index.php" rel="import"></a>
+    <link rel="icon" href="assets/icons/logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" <a
+        href="index.php" rel="import"></a>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
                     <stop offset="0.6" style="stop-color: rgb(251, 255, 0);" />
                 </linearGradient>
             </defs>
-            <path style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255);"
+            <path id="face" style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255);"
                 d="M 255.003 59.544 C 104.369 161.979 104.095 352.557 246.505 454.377 C 385.634 371.497 404.169 172.904 255.003 59.544 Z">
                 <title>FACE</title>
             </path>
@@ -61,7 +63,7 @@
                 d="M 353.229 278.108 C 334.185 291.403 317.095 299.73 295.42 306.428 C 288.018 302.69 281.21 297.507 274.996 290.883 C 304.242 285.499 328.5 277.463 354.247 265.845 C 353.953 270.052 353.833 272.268 353.229 278.108 Z">
                 <title>Reye</title>
             </path>
-            <path style="paint-order: fill; stroke: rgb(0, 0, 0); stroke-width: 4px;"
+            <path id="leye" style="paint-order: fill; stroke: rgb(0, 0, 0); stroke-width: 4px;"
                 d="M 144.646 273.154 C 143.931 274.601 144.74 274.214 145.895 275.052 C 163.494 287.814 185.593 298.142 212.186 306.038 C 216.598 302.35 221.307 297.212 226.306 290.626 C 198.489 286.153 172.619 278.692 148.697 268.237 C 146.597 267.319 144.291 266.325 144.291 266.325 C 144.291 266.325 144.282 270.395 144.646 273.154 Z">
                 <title>Leye</title>
             </path>
@@ -69,7 +71,7 @@
                 d="M 161.673 136.163 C 191.734 95.006 222.566 65.529 254.172 47.737 C 294.044 73.128 324.282 105.813 344.878 145.798 C 345.07 93.347 315.392 59.641 256.08 44.382 C 255.707 44.286 255.298 44.354 254.775 44.29 C 254.14 44.318 253.845 44.253 253.292 44.335 C 197.539 52.588 167.073 83.103 161.673 136.163 Z">
                 <title>TOP head</title>
             </path>
-            <path style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 9px;"
+            <path id="top-hf" style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 9px;"
                 d="M 148.043 134.295 C 126.548 135.276 104.541 139.647 82.021 147.405 C 113.86 -23.927 412.486 -3.345 423.417 152.263 C 403.999 144.517 381.048 141.97 357.574 144.319 C 338.807 -1.17 165.227 12.317 148.043 134.295 Z">
                 <title>TOP HF</title>
             </path>
@@ -82,7 +84,7 @@
         <div id="socials-bubble">
             <h2>Our Socials</h2>
             <h3>Animal News Episode 1</h3>
-            <iframe crossorigin="anonymous" src=""></iframe>
+            <iframe class="social-vid" crossorigin="anonymous" src=""></iframe>
             <div class="icon-bar">
                 <ul>
                     <li>
@@ -121,14 +123,31 @@
                 src="https://www.shutterstock.com/shutterstock/videos/1056029879/preview/stock-footage-smart-city-aerial-drone-footage-hologram-information-arches-forming-during-network-communication.webm"></iframe>
             <p>Get the game now!<br>
                 Now available on <br>Google Play & App Store</p>
-            <a class="playstore" href="https://play.google.com/store/games" target="_blank">
-                <img src="assets/images/playstore.jpg" alt="Get it on PlayStore">
-            </a>
-            </br>
-            <a class="applestore" href="https://www.apple.com/store" target="_blank">
-                <img src="assets/images/applestore.svg" alt="Get it on Apple Store">
-            </a>
+            <div class="badges">
+                <ul>
+                    <li>
+                        <a class="playstore" href="https://play.google.com/store/games" target="_blank">
+                            <img src="assets/images/playstore.jpg" alt="Get it on PlayStore">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="applestore" href="https://www.apple.com/store" target="_blank">
+                            <img src="assets/images/applestore.svg" alt="Get it on Apple Store">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <div id="playlist">
+            <h2>ZebraPunk</h2>
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/album/78bpIziExqiI9qztvNFlQu?utm_source=generator&theme=0"
+                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+        </div>
+
 
     </div>
     <script src="script.js"></script>
