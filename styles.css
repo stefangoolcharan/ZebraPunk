@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300;1,700&display=swap');
 
+
 body {
     background-color: rgb(255, 0, 0);
 }
@@ -306,6 +307,48 @@ body {
     width: auto;
 }
 
+/*Merch*/
+
+#merch {
+    display: none;
+    position: absolute;
+    top: 50vh;
+    left: 9vw;
+    width: 79%;
+    padding: 2%;
+    background-color: #f5f5f5;
+    border-radius: 1vh;
+    box-shadow: -12px 15px 20px #1b1919;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#merch h2 {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+#merch p {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-size: 2vh;
+    text-align: center;
+}
+
+#merch img {
+    margin: 0;
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 31%;
+    padding-bottom: 2%;
+}
 
 /*Spotify Playlist*/
 
@@ -331,6 +374,16 @@ body {
     color: black;
 }
 
+.punkimg {
+    margin: 0;
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 31%;
+    padding-bottom: 2%;
+}
 
 /*Mobile Landscape Responsiveness*/
 
@@ -347,7 +400,6 @@ body {
         padding-left: 30%;
         padding-right: 3vw;
     }
-
 
     /*PotHole Simulator*/
 
@@ -417,9 +469,369 @@ body {
 
     #playlist {
         top: 60vh;
-        left: 16%;
+        left: 27%;
         padding: 2%;
+        width: 40%;
+    }
+
+    /*Merch*/ 
+
+    #merch {
+        display: none;
+        position: absolute;
+        top: 30vh;
+        left: 30vw;
+        width: 36%;
+        padding: 1%;
+        background-color: #f5f5f5;
+        border-radius: 1vh;
+        box-shadow: -12px 15px 20px #1b1919;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    #merch h2 {
+        font-family: 'Kanit', sans-serif;
+        margin: 0;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    #merch p {
+        margin-top: 7px;
+        margin-bottom: 12px;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400;
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    #merch img {
+        margin: 0;
+        width: 40%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 31%;
+        padding-bottom: 2%;
+    }
+
+}
+
+/*Tablet Portrait Responsiveness*/
+
+@media (min-width: 750px) and (max-width: 1000px) {
+
+    .zebrapunk svg {
+        height: 50%;
+        padding-top: 20vh;
+        padding-left: 14.5%;
+    }
+
+    #download-game {
+        top: 53vh;
+        left: 21.5%;
+        width: 55%;
+        height: 45%;
+    }
+
+    #download-game h2 {
+        font-family: 'Kanit', sans-serif;
+        margin-left: 12px;
+        margin-bottom: 1vh;
+        text-align: center;
+        font-size: 2.8vh;
+    }
+
+    #download-game iframe {
+        border: #1b1919;
+        border-style: solid;
+        height: 20vh;
+    }
+
+    #download-game p {
+        font-size: 2.3vh;
+    }
+
+    .playstore img {
+        height: auto;
+        width: 25vw;
+    }
+
+    .applestore img {
+        height: auto;
+        width: 23vw;
+        padding-right: 1vw;
+    }
+
+    .badges ul li a {
+        margin: 5px;
+    }
+
+    /*Social Media*/
+
+    #socials-bubble {
+        top: 53vh;
+        left: 21.5%;
+        width: 55%;
+    }
+
+    #socials-bubble h2 {
+        font-size: 2.8vh;
+    }
+
+    #socials-bubble h3 {
+        font-size: 2vh;
+    }
+
+    .social-vid {
+        border: #1b1919;
+        border-style: solid;
+        height: 20vh;
+    }
+
+    .icons img {
+        margin-top: 1vh;
+        height: 5vh;
+        width: auto;
+    }
+
+    #socials-bubble p {
+        margin-top: -1vh;
+        font-size: 2vh;
+    }
+
+    /*Spotify Playlist*/
+
+    #playlist {
+        top: 53vh;
+        left: 21.5%;
+        padding: 2%;
+        width: 55%;
+    }
+
+    /*Merch*/
+
+    #merch {
+        display: none;
+        position: absolute;
+        top: 53vh;
+        left: 20.5vw;
         width: 60%;
+        padding: 1%;
+    }
+
+    #merch h2 {
+        font-family: 'Kanit', sans-serif;
+        margin: 0;
+        font-size: 2.8vh;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    #merch p {
+        font-size: 2vh;
+    }
+
+    #merch img {
+        margin: 0;
+        width: 40%;
     }
 }
 
+@media (min-width: 1180px) and (max-width: 1200px) { 
+
+    .zebrapunk svg {
+        height: 50%;
+        padding-top: 20vh;
+        padding-left: 32%;
+    }
+
+    #socials-bubble {
+        display: none;
+        position: absolute;
+        top: 30vh;
+        right: 6vw;
+        padding: 2%;
+        width: 22%;
+    }
+
+    #download-game {
+        top: 30vh;
+        left: 6vw;
+        width: 22%;
+        padding: 2%;
+    }
+
+    .playstore img {
+        height: auto;
+        width: 10vw;
+    }
+
+    .applestore img {
+        height: auto;
+        width: 10vw;
+        padding-right: 1vw;
+    }
+
+    .badges ul li a {
+        justify-content: space-around;
+    }
+}
+
+/*Desktop Rsponsiveness*/
+
+@media (min-width: 1400px) {
+
+    .zebrapunk svg {
+        height: auto;
+        width: 35%;
+        position: absolute;
+        padding-top: 12vh;
+        padding-left: 31%;
+    }
+
+    #download-game {
+        top: 40vh;
+        left: 10.5%;
+        width: 16%;
+        padding: 1.5%;
+    }
+
+    #download-game h2 {
+        font-family: 'Kanit', sans-serif;
+        margin-left: 12px;
+        margin-bottom: 1vh;
+        text-align: center;
+    }
+
+    #download-game iframe {
+        border: #1b1919;
+        border-style: solid;
+        width: 100%;
+        height: auto;
+        border-radius: 0.75vh;
+    }
+
+    #download-game p {
+        font-size: 2vh;
+    }
+
+    .playstore img {
+        height: auto;
+        width: 8.5vw;
+        margin-right: -2.5vw;
+    }
+
+    .applestore img {
+        height: auto;
+        width: 8vw;
+        margin-right: -2.5vw;
+    }
+
+    .badges ul li a {
+        justify-content: space-around;
+
+    }
+
+    #socials-bubble {
+        top: 40vh;
+        right: 12.5%;
+        width: 16%;
+        padding: 1.5%;
+    }
+
+    .social-vid {
+        border: #1b1919;
+        border-style: solid;
+        width: 99%;
+        height: auto;
+        border-radius: 0.75vh;
+    }
+
+    .icons img {
+        height: 4vh;
+        width: auto;
+    }
+
+    #socials-bubble p {
+        margin-top: -1vh;
+        font-size: 2vh;
+    }
+
+    #playlist {
+        display: none;
+        position: absolute;
+        top: 56vh;
+        left: 37.2vw;
+        padding: 1.5%;
+        width: 20%;
+        background-color: #f5f5f5;
+        border-radius: 1vh;
+        box-shadow: 12px 15px 20px #1b1919;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    #playlist h2 {
+        margin: 0;
+        padding-bottom: 10px;
+        font-family: 'Kanit', sans-serif;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+    }
+
+    .punkimg {
+        margin: 0;
+        width: 40%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 31%;
+        padding-bottom: 2%;
+    }
+
+    #merch {
+        display: none;
+        position: absolute;
+        top: 30vh;
+        left: 34vw;
+        width: 26%;
+        padding: 2%;
+        background-color: #f5f5f5;
+        border-radius: 1vh;
+        box-shadow: -12px 15px 20px #1b1919;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    #merch h2 {
+        font-family: 'Kanit', sans-serif;
+        margin: 0;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    #merch p {
+        margin-top: 7px;
+        margin-bottom: 12px;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400;
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    #merch img {
+        margin: 0;
+        width: 40%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 31%;
+        padding-bottom: 2%;
+    }
+}
