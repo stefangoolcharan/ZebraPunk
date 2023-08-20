@@ -97,15 +97,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-//Banner
-var downloadEP = document.getElementById('banner')
-
-downloadEP.addEventListener("click", function () {
-  const link = 'https://open.spotify.com/?';
-
-  window.open(link, '_blank');
-})
-
 //Spotify Playlist
 
 const playlist = document.getElementById("playlist");
@@ -119,3 +110,28 @@ document.addEventListener("click", function (event) {
     playlist.style.display = "none";
   }
 });
+
+//EP Download
+const EPdownload = document.getElementById("download-ep");
+const banner = document.getElementById("banner");
+const download = document.getElementById("continue");
+const exit = document.getElementById("decline");
+
+banner.addEventListener("click", function () {
+  EPdownload.style.display = "inline-block";
+});
+
+document.addEventListener("click", function (event) {
+  if (!banner.contains(event.target)) {
+    EPdownload.style.display = "none";
+  }
+});
+
+document.addEventListener("click", function (event) {
+  if (exit.contains(event.target)) {
+    EPdownload.style.display = "none";
+  }
+});
+
+
+

@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: rgb(255, 0, 0);
+    background-color: #ff0000;
 }
 
 .zebrapunk svg {
@@ -17,7 +17,19 @@ body {
 
 
 /*SVG Animations*/
+.animate {
+    animation: bubble_animate 2s infinite;
+}
 
+@keyframes bubble_animate {
+    50% {
+        transform: translateY(1%);
+    }
+
+    50% {
+        transform: translateY(-1%);
+    }
+}
 
 #r-outer-ear {
     animation: outRJiggle 1s infinite;
@@ -27,6 +39,11 @@ body {
 #r-outer-ear.paused {
     animation-play-state: paused;
 }
+
+#r-outer-ear:hover {
+    cursor: pointer;
+}
+
 
 @keyframes outRJiggle {
     0% {
@@ -51,6 +68,11 @@ body {
     animation-play-state: paused;
 }
 
+#l-outer-ear:hover {
+    cursor: pointer;
+}
+
+
 @keyframes outLJiggle {
     0% {
         transform: translateX(-1px);
@@ -68,6 +90,11 @@ body {
 #l-inner-ear {
     animation: innerLJiggle 2s 2s infinite;
 }
+
+#l-inner-ear:hover {
+    cursor: pointer;
+}
+
 
 @keyframes innerLJiggle {
     0% {
@@ -96,6 +123,11 @@ body {
 #r-inner-ear {
     animation: innerRJiggle 2s 2s infinite;
 }
+
+#r-inner-ear:hover {
+    cursor: pointer;
+}
+
 
 @keyframes innerRJiggle {
     0% {
@@ -130,6 +162,10 @@ body {
     animation-play-state: paused;
 }
 
+#top-hf:hover {
+    cursor: pointer;
+}
+
 @keyframes TopHF {
     0% {
         transform: translateY(-1px);
@@ -152,6 +188,11 @@ body {
 #leye.paused {
     animation-play-state: paused;
 }
+
+#leye:hover {
+    cursor: pointer;
+}
+
 
 @keyframes Face {
     0% {
@@ -186,7 +227,7 @@ body {
     top: 50vh;
     left: 8vw;
     width: 79%;
-    padding: 2%;
+    padding: 10px;
     background-color: #f5f5f5;
     border-radius: 1vh;
     box-shadow: -12px 15px 20px #1b1919;
@@ -210,7 +251,15 @@ body {
     text-align: center;
 }
 
+#download-game img {
+    width: 100%;
+    height: auto;
+    border: solid #1b1919 2px;
+    border-radius: 8px;
+}
+
 #download-game iframe {
+
     border: #1b1919;
     border-style: solid;
     border-radius: 1vh;
@@ -245,8 +294,8 @@ body {
     display: none;
     position: absolute;
     top: 50vh;
-    right: 8vw;
-    padding: 2%;
+    right: 7.5vw;
+    padding: 10px;
     width: 79%;
     background-color: #f5f5f5;
     border-radius: 1vh;
@@ -261,6 +310,7 @@ body {
     text-decoration: none;
     text-align: center;
     color: black;
+
 }
 
 .social-vid {
@@ -302,6 +352,10 @@ body {
     align-items: center;
 }
 
+.icon-bar li {
+    padding: 5px;
+}
+
 .icons img {
     height: 5vh;
     width: auto;
@@ -313,6 +367,7 @@ body {
     display: none;
     position: absolute;
     top: 50vh;
+    height: 48vh;
     left: 9vw;
     width: 79%;
     padding: 2%;
@@ -321,6 +376,7 @@ body {
     box-shadow: -12px 15px 20px #1b1919;
     border-style: solid;
     border-width: 2px;
+    overflow-y: scroll;
 }
 
 #merch h2 {
@@ -339,16 +395,17 @@ body {
     text-align: center;
 }
 
-#merch img {
-    margin: 0;
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 31%;
-    padding-bottom: 2%;
+.wrapper img {
+    height: 80%;
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /*Spotify Playlist*/
 
@@ -357,10 +414,10 @@ body {
     position: absolute;
     top: 50vh;
     left: 7.5vw;
-    padding: 2%;
+    padding: 10px;
     width: 80%;
     background-color: #f5f5f5;
-    border-radius: 1vh;
+    border-radius: 8px;
     box-shadow: 12px 15px 20px #1b1919;
     border-style: solid;
     border-width: 2px;
@@ -385,6 +442,74 @@ body {
     padding-bottom: 2%;
 }
 
+#download-ep {
+    display: none;
+    position: absolute;
+    top: 50vh;
+    right: 7.5vw;
+    padding: 10px;
+    width: 79%;
+    background-color: #f5f5f5;
+    border-radius: 1vh;
+    box-shadow: 12px 15px 20px #1b1919;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#download-ep img {
+    margin: 0;
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 31%;
+    padding-bottom: 2%;
+}
+
+#download-ep h2 {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    font-size: 2.5vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+#download-ep h3 {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+#download-ep ul li {
+    display: inline-block;
+    position: relative;
+    left: 5%;
+}
+
+#download-ep ul li:last-child {
+    padding-left: 5px;
+}
+
+#download-ep ul li button {
+    border: 2px solid #1b1919;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#download-ep ul li button a {
+    text-decoration: none;
+    color: #1b1919;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+
 /*Mobile Landscape Responsiveness*/
 
 @media (min-width: 550px) and (max-width: 950px) {
@@ -404,9 +529,10 @@ body {
     /*PotHole Simulator*/
 
     #download-game {
-        top: 60vh;
+        top: 3vh;
         left: 9%;
         width: 35%;
+        border-radius: 8px;
     }
 
     #download-game h2 {
@@ -442,9 +568,10 @@ body {
     /*Social Media*/
 
     #socials-bubble {
-        top: 60vh;
+        top: 2vh;
         right: 10.5%;
         width: 35%;
+        border-radius: 8px;
     }
 
     .social-vid {
@@ -468,60 +595,89 @@ body {
     /*Spotify Playlist*/
 
     #playlist {
-        top: 60vh;
+        top: 2vh;
         left: 27%;
         padding: 2%;
         width: 40%;
+        border-radius: 10px;
     }
 
-    /*Merch*/ 
+    /*Merch*/
 
     #merch {
         display: none;
         position: absolute;
         top: 30vh;
-        left: 30vw;
-        width: 36%;
+        left: 16vw;
+        width: 66%;
         padding: 1%;
         background-color: #f5f5f5;
-        border-radius: 1vh;
+        border-radius: 2vh;
         box-shadow: -12px 15px 20px #1b1919;
         border-style: solid;
         border-width: 2px;
+        overflow-y: hidden;
     }
 
-    #merch h2 {
+    #merch p{ 
+        font-size: 13px;
+    }
+
+    .wrapper img {
+        width: calc(60%/4);
+        object-fit: cover;
+        display: block;
+        height: 100px;
+        width: 100px;
+        margin-left: 16px;
+        border-radius: 20px;
+        transition: 0.3s;
+        display: inline;
+    }
+
+    #download-ep {
+        top: 16vh;
+        left: 21vw;
+        height: 60%;
+        width: 55%;
+        border-radius: 2vh;
+    }
+
+    #download-ep h2 {
         font-family: 'Kanit', sans-serif;
         margin: 0;
+        font-size: 4vh;
         margin-bottom: 2vh;
         text-align: center;
     }
 
-    #merch p {
-        margin-top: 7px;
-        margin-bottom: 12px;
+    #download-ep h3 {
         font-family: 'Kanit', sans-serif;
-        font-weight: 400;
-        font-size: 4vh;
+        margin: 0;
+        font-size: 13px;
+        margin-bottom: 2vh;
         text-align: center;
     }
 
-    #merch img {
-        margin: 0;
-        width: 40%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 31%;
-        padding-bottom: 2%;
+    #download-ep img {
+        transform: scale(80%);
+    }
+
+    #download-ep ul li button {
+        transform: scale(80%);
+    }
+
+    #download-ep ul li {
+        display: inline-block;
+        position: relative;
+        left: 17%;
     }
 
 }
 
 /*Tablet Portrait Responsiveness*/
 
-@media (min-width: 750px) and (max-width: 1000px) {
+@media (min-width: 750px) and (max-width: 1022px) {
 
     .zebrapunk svg {
         height: 50%;
@@ -531,9 +687,10 @@ body {
 
     #download-game {
         top: 53vh;
-        left: 21.5%;
-        width: 55%;
-        height: 45%;
+        left: 21%;
+        width: auto;
+        height: auto;
+        border-radius: 1vh;
     }
 
     #download-game h2 {
@@ -575,6 +732,7 @@ body {
         top: 53vh;
         left: 21.5%;
         width: 55%;
+        border-radius: 1vh;
     }
 
     #socials-bubble h2 {
@@ -617,9 +775,11 @@ body {
         display: none;
         position: absolute;
         top: 53vh;
+        height: auto;
         left: 20.5vw;
         width: 60%;
         padding: 1%;
+        border-radius: 1vh;
     }
 
     #merch h2 {
@@ -636,11 +796,31 @@ body {
 
     #merch img {
         margin: 0;
-        width: 40%;
+        display: inline-block;
+        height: 120px;
+        width: auto;
+    }
+
+    #download-ep {
+        top: 40vh;
+        left: 23vw;
+        border-radius: 1vh;
+        height: auto;
+    }
+
+    #download-ep ul li button {
+        transform: scale(110%);
+    }
+
+    #download-ep ul li {
+        display: inline-block;
+        position: relative;
+        left: 10vw;
+        padding-right: 20px;
     }
 }
 
-@media (min-width: 1180px) and (max-width: 1200px) { 
+@media (min-width: 1180px) and (max-width: 1200px) {
 
     .zebrapunk svg {
         height: 50%;
@@ -653,7 +833,7 @@ body {
         position: absolute;
         top: 30vh;
         right: 6vw;
-        padding: 2%;
+        padding: 1.5%;
         width: 22%;
     }
 
@@ -661,7 +841,7 @@ body {
         top: 30vh;
         left: 6vw;
         width: 22%;
-        padding: 2%;
+        padding: 1.5%;
     }
 
     .playstore img {
@@ -678,6 +858,84 @@ body {
     .badges ul li a {
         justify-content: space-around;
     }
+
+    #playlist {
+        top: 20vh;
+        width: 30vw;
+        left: 34vw;
+    }
+
+    #download-ep img {
+        width: 35%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+    }
+
+    #download-ep {
+        width: 40%;
+        right: 29vw;
+    }
+
+    #download-ep ul li {
+        position: relative;
+        left: 22%;
+        padding-right: 10px;
+    }
+
+    #download-ep ul li button {
+        border: 2px solid #1b1919;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #download-ep ul li button a {
+        text-decoration: none;
+        color: #1b1919;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .wrapper {
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .wrapper ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .wrapper img {
+        object-fit: cover;
+        height: 180px;
+        width: 180px;
+        margin-left: 16px;
+        border-radius: 20px;
+        transition: 0.3s;
+        display: inline;
+    }
+
+    .wrapper {
+        white-space: nowrap;
+        font-size: 0px;
+        cursor: pointer;
+    }
+
+    #merch {
+        position: relative;
+        left: 14vw;
+        height: auto;
+        padding: 20px;
+        width: 69%;
+        overflow-x: hidden;
+    }
+
 }
 
 /*Desktop Rsponsiveness*/
@@ -694,9 +952,16 @@ body {
 
     #download-game {
         top: 40vh;
-        left: 10.5%;
+        left: 11.5%;
         width: 16%;
-        padding: 1.5%;
+        padding: 18px;
+    }
+
+    #download-game img {
+        width: 100%;
+        height: auto;
+        border: solid #1b1919 2px;
+        border-radius: 8px;
     }
 
     #download-game h2 {
@@ -737,10 +1002,11 @@ body {
 
     #socials-bubble {
         top: 40vh;
-        right: 12.5%;
+        right: 14%;
         width: 16%;
-        padding: 1.5%;
+        padding: 15px;
     }
+
 
     .social-vid {
         border: #1b1919;
@@ -753,6 +1019,11 @@ body {
     .icons img {
         height: 4vh;
         width: auto;
+        transition: 0.3s;
+    }
+
+    .icons img:hover {
+        transform: scale(110%);
     }
 
     #socials-bubble p {
@@ -763,7 +1034,7 @@ body {
     #playlist {
         display: none;
         position: absolute;
-        top: 56vh;
+        top: 20vh;
         left: 37.2vw;
         padding: 1.5%;
         width: 20%;
@@ -795,17 +1066,17 @@ body {
     }
 
     #merch {
-        display: none;
-        position: absolute;
+        position: relative;
         top: 30vh;
-        left: 34vw;
-        width: 26%;
-        padding: 2%;
+        left: 25vw;
+        height: auto;
+        padding: 20px;
+        max-width: 1200px;
+        width: 44%;
         background-color: #f5f5f5;
         border-radius: 1vh;
         box-shadow: -12px 15px 20px #1b1919;
-        border-style: solid;
-        border-width: 2px;
+        overflow-x: hidden;
     }
 
     #merch h2 {
@@ -824,14 +1095,121 @@ body {
         text-align: center;
     }
 
-    #merch img {
+    .wrapper {
+
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .wrapper ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* Adjust as needed */
+        padding: 10px;
+
+    }
+
+    #merch ul li {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .wrapper img {
+        width: calc(60%/4);
+        object-fit: cover;
+        height: 180px;
+        width: 180px;
+        margin-left: 16px;
+        border-radius: 20px;
+        transition: 0.3s;
+        display: inline;
+    }
+
+    .wrapper img:hover {
+        transform: scale(110%);
+    }
+
+    .wrapper {
+        white-space: nowrap;
+        font-size: 0px;
+        cursor: pointer;
+
+    }
+
+    #banner:hover {
+        cursor: pointer;
+    }
+
+    #download-ep {
+        display: none;
+        position: absolute;
+        top: 30vh;
+        left: 34vw;
+        width: 26%;
+        padding: 2%;
+        background-color: #f5f5f5;
+        border-radius: 1vh;
+        box-shadow: -12px 15px 20px #1b1919;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    #download-ep h2 {
+        font-family: 'Kanit', sans-serif;
+        margin: 0;
+        margin-bottom: 2vh;
+        text-align: center;
+    }
+
+    #download-ep h3 {
+        margin-top: 7px;
+        margin-bottom: 12px;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400;
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    #download-ep img {
         margin: 0;
         width: 40%;
         height: auto;
         display: flex;
-        justify-content: center;
         align-items: center;
         padding-left: 31%;
         padding-bottom: 2%;
     }
+
+    #download-ep ul li {
+        display: inline-block;
+        position: relative;
+        left: 18%;
+        padding: 15px;
+    }
+
+    #download-ep ul li button {
+        border: 2px solid #1b1919;
+        background-color: transparent;
+        transition: 0.3s;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #download-ep ul li button:hover {
+        transform: scale(110%);
+    }
+
+    #download-ep ul li button a {
+        text-decoration: none;
+        color: #1b1919;
+        font-family: 'Kanit', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    #download-ep ul li button a:hover {
+        color: red;
+    }
+
 }
